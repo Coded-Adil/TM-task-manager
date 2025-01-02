@@ -1,39 +1,79 @@
 import { Link } from "react-router-dom";
-import tmLogo from "../../assets/logo.png"
+import tmLogo from "../../assets/fav.png";
+import { useState } from "react";
 
 const Navbar = () => {
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+
+    const toggleDropdown = () => {
+        setDropdownOpen((prev) => !prev);
+    };
+
     return (
-        <div className="navbar container mx-auto">
-            <Link className="flex-1">
-                    <img className="h-16 max-w-full" src={tmLogo} alt="" />
-            </Link>
-            <div className="flex-none gap-2">
-                <div className="form-control">
-                    <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" />
+        <nav className="bg-gray-900 text-gray-200 shadow">
+            <div className="container mx-auto flex items-center justify-between px-4 py-2">
+                {/* Logo */}
+                <Link to="/" className="flex items-center gap-2">
+                    <img className="h-10" src={tmLogo} alt="Task Manager Logo" />
+                    <h2 className="text-3xl text-yellow-300">TM</h2>
+                </Link>
+
+                {/* Search Input */}
+                <div className="hidden md:flex items-center">
+                    <input
+                        type="text"
+                        placeholder="Search"
+                        className="block w-48 rounded border border-gray-700 bg-gray-800 p-2 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring focus:ring-blue-500"
+                    />
                 </div>
-                <div className="dropdown dropdown-end">
-                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                        <div className="w-10 rounded-full">
+
+                {/* Menu Items */}
+                <div className="flex items-center space-x-4">
+                    {/* Avatar Dropdown */}
+                    <div className="relative">
+                        <button
+                            onClick={toggleDropdown}
+                            type="button"
+                            className="flex items-center focus:outline-none"
+                            aria-label="User Menu"
+                        >
                             <img
-                                alt="Tailwind CSS Navbar component"
-                                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                                className="h-10 w-10 rounded-full border border-gray-700"
+                                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                                alt="User Avatar"
+                            />
+                        </button>
+
+                        {/* Dropdown Menu */}
+                        <div
+                            className={`absolute right-0 mt-2 w-48 origin-top-right rounded-md bg-gray-800 shadow-lg ring-1 ring-gray-700 ${dropdownOpen ? "block" : "hidden"
+                                }`}
+                        >
+                            <div className="py-1">
+                                <Link
+                                    to="/profile"
+                                    className="block px-4 py-2 text-gray-200 hover:bg-gray-700"
+                                >
+                                    Profile
+                                </Link>
+                                <Link
+                                    to="/settings"
+                                    className="block px-4 py-2 text-gray-200 hover:bg-gray-700"
+                                >
+                                    Settings
+                                </Link>
+                                <button
+                                    type="button"
+                                    className="w-full text-left px-4 py-2 text-gray-200 hover:bg-gray-700"
+                                >
+                                    Logout
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    <ul
-                        tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                        <li>
-                            <a className="justify-between">
-                                Profile
-                                <span className="badge">New</span>
-                            </a>
-                        </li>
-                        <li><a>Settings</a></li>
-                        <li><a>Logout</a></li>
-                    </ul>
                 </div>
             </div>
-        </div>
+        </nav>
     );
 };
 
