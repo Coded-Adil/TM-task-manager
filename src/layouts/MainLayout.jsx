@@ -6,7 +6,7 @@ const MainLayout = () => {
         // <div className="max-w-6xl mx-auto">
         <div>
             {/* NavBar */}
-            <div className="bg-black">
+            <div className="bg-black border-b">
                 <Navbar />
             </div>
             <Outlet />

@@ -2,11 +2,11 @@ import { useState } from "react";
 
 const Login = () => {
 
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-
     const handleLogin = (e) => {
         e.preventDefault();
+        const form = e.target;
+        const email = form.email.value;
+        const password = form.password.value;
         console.log("Email:", email, "Password:", password);
     };
 
@@ -30,8 +30,7 @@ const Login = () => {
                             id="email"
                             type="email"
                             required
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
+                            name="email"
                             className="mt-1 w-full rounded border border-gray-700 bg-gray-900 p-2 text-gray-300 placeholder-gray-500 focus:border-blue-500 focus:ring focus:ring-blue-500"
                             placeholder="Enter your email"
                         />
@@ -49,8 +48,7 @@ const Login = () => {
                             id="password"
                             type="password"
                             required
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
+                            name="password"
                             className="mt-1 w-full rounded border border-gray-700 bg-gray-900 p-2 text-gray-300 placeholder-gray-500 focus:border-blue-500 focus:ring focus:ring-blue-500"
                             placeholder="Enter your password"
                         />
