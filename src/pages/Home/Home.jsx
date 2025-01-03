@@ -1,11 +1,11 @@
-import CategoryBar from "../../components/CategoryBar/CategoryBar";
+import TaskBar from "../../components/TaskBar/TaskBar";
 
 const Home = () => {
     return (
         <div>
             <div>
-                {/* Category */}
-                <CategoryBar />
+                {/* Task */}
+                <TaskBar />
             </div>
         </div>
     );

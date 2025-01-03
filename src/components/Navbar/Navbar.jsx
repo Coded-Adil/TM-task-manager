@@ -10,7 +10,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-gray-900 text-gray-200 shadow">
+        <nav className="bg-black text-gray-200 shadow">
             <div className="container mx-auto flex items-center justify-between px-4 py-2">
                 {/* Logo */}
                 <Link to="/" className="flex items-center gap-2">
