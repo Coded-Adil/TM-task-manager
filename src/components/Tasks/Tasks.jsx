@@ -1,20 +1,21 @@
+import { useEffect, useState } from "react";
+import TaskCard from "../TaskCard/TaskCard";
 
-const Tasks = ({tasks}) => {
+const Tasks = () => {
+    const [tasks, setTasks] = useState([]);
+
+    useEffect(() => {
+        fetch("task.json")
+            .then(res => res.json())
+            .then(data => setTasks(data))
+    }, [])
     return (
-        <div className="mt-6">
-            <h2 className="text-2xl font-semibold">Task List</h2>
-            {tasks.length === 0 ? (
-                <p className="text-gray-500 mt-4">No tasks yet. Add some!</p>
-            ) : (
-                <ul className="mt-4 space-y-2">
-                    {tasks.map((task) => (
-                        <li key={task.id} className="p-4 bg-gray-100 rounded shadow">
-                            <h3 className="font-bold">{task.title}</h3>
-                            <p>{task.description}</p>
-                        </li>
-                    ))}
-                </ul>
-            )}
+        <div className="container mx-auto text-white">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {
+                    tasks.map(task => <TaskCard key={task._id} task={task}></TaskCard>)
+                }
+            </div>
         </div>
     );
 };

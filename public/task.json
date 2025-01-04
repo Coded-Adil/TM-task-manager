@@ -1,0 +1,104 @@
+[
+    {
+        "_id": "1",
+        "title": "Update Project Roadmap",
+        "description": "Revise the project roadmap for the upcoming sprint.",
+        "type": "Solo",
+        "status": "Important",
+        "deadline": "2025-01-10",
+        "created_at": "2025-01-01",
+        "assigned_to": {
+            "name": "John Doe",
+            "photoURL": "https://randomuser.me/api/portraits/men/1.jpg"
+        },
+        "created_by": {
+            "name": "John Doe",
+            "photoURL": "https://randomuser.me/api/portraits/men/1.jpg"
+        }
+    },
+    {
+        "_id": "2",
+        "title": "Write Unit Tests for API",
+        "description": "Ensure proper unit test coverage for backend API endpoints.",
+        "type": "Solo",
+        "status": "Completed",
+        "deadline": "2025-01-05",
+        "created_at": "2024-12-28",
+        "assigned_to": {
+            "name": "Jane Smith",
+            "photoURL": "https://randomuser.me/api/portraits/women/2.jpg"
+        },
+        "created_by": {
+            "name": "Jane Smith",
+            "photoURL": "https://randomuser.me/api/portraits/women/2.jpg"
+        }
+    },
+    {
+        "_id": "3",
+        "title": "Design New Dashboard Layout",
+        "description": "Create a visually appealing and user-friendly dashboard layout.",
+        "type": "Solo",
+        "status": "Regular",
+        "deadline": "2025-01-15",
+        "created_at": "2025-01-02",
+        "assigned_to": {
+            "name": "Alice Brown",
+            "photoURL": "https://randomuser.me/api/portraits/women/3.jpg"
+        },
+        "created_by": {
+            "name": "Alice Brown",
+            "photoURL": "https://randomuser.me/api/portraits/women/3.jpg"
+        }
+    },
+    {
+        "_id": "4",
+        "title": "Prepare Monthly Report",
+        "description": "Compile and summarize the project's progress in the monthly report.",
+        "type": "Solo",
+        "status": "Important",
+        "deadline": "2025-01-08",
+        "created_at": "2025-01-01",
+        "assigned_to": {
+            "name": "Mike Johnson",
+            "photoURL": "https://randomuser.me/api/portraits/men/4.jpg"
+        },
+        "created_by": {
+            "name": "Mike Johnson",
+            "photoURL": "https://randomuser.me/api/portraits/men/4.jpg"
+        }
+    },
+    {
+        "_id": "5",
+        "title": "Fix UI Bugs in Login Page",
+        "description": "Resolve alignment issues and improve responsiveness of the login page.",
+        "type": "Solo",
+        "status": "Completed",
+        "deadline": "2025-01-03",
+        "created_at": "2024-12-30",
+        "assigned_to": {
+            "name": "John Doe",
+            "photoURL": "https://randomuser.me/api/portraits/men/1.jpg"
+        },
+        "created_by": {
+            "name": "John Doe",
+            "photoURL": "https://randomuser.me/api/portraits/men/1.jpg"
+        }
+    },
+    {
+        "_id": "6",
+        "title": "Organize Team Meeting",
+        "description": "Plan and schedule the next team meeting for project updates.",
+        "type": "Solo",
+        "status": "Regular",
+        "deadline": "2025-01-07",
+        "created_at": "2025-01-01",
+        "assigned_to": {
+            "name": "Jane Smith",
+            "photoURL": "https://randomuser.me/api/portraits/women/2.jpg"
+        },
+        "created_by": {
+            "name": "Jane Smith",
+            "photoURL": "https://randomuser.me/api/portraits/women/2.jpg"
+        }
+    }
+]
