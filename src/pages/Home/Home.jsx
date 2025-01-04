@@ -9,7 +9,9 @@ const Home = () => {
                     <TaskBar />
                 </div>
                 {/* Task */}
-                <Tasks />
+                <div className="py-6">
+                    <Tasks />
+                </div>
             </div>
         </div>
     );
