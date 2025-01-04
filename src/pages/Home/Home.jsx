@@ -5,8 +5,10 @@ const Home = () => {
     return (
         <div>
             <div className="min-h-screen">
+                <div className="container mx-auto">
+                    <TaskBar />
+                </div>
                 {/* Task */}
-                <TaskBar />
                 <Tasks />
             </div>
         </div>

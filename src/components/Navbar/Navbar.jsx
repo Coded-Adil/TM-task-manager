@@ -29,8 +29,12 @@ const Navbar = () => {
 
                 {/* Menu Items */}
                 <div className="flex items-center space-x-4">
+                    <div className="flex gap-2">
+                        <Link to='/registration' className="text-md font-semibold transition-all duration-300 border-b p-2 hover:bg-yellow-300 hover:text-black">Register</Link>
+                        <Link to='/login' className="text-md font-semibold transition-all duration-300 px-4 py-2 border rounded-md bg-blue-800 hover:bg-blue-600">Login</Link>
+                    </div>
                     {/* Avatar Dropdown */}
-                    <div className="relative">
+                    {/* <div className="relative">
                         <button
                             onClick={toggleDropdown}
                             type="button"
@@ -42,10 +46,10 @@ const Navbar = () => {
                                 src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
                                 alt="User Avatar"
                             />
-                        </button>
+                        </button> */}
 
                         {/* Dropdown Menu */}
-                        <div
+                        {/* <div
                             className={`absolute right-0 mt-2 w-48 origin-top-right rounded-md bg-gray-800 shadow-lg ring-1 ring-gray-700 ${dropdownOpen ? "block" : "hidden"
                                 }`}
                         >
@@ -70,7 +74,7 @@ const Navbar = () => {
                                 </button>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </nav>

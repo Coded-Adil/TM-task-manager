@@ -40,7 +40,7 @@ const TaskBar = () => {
         <div className="flex gap-4">
           {/* Add Task */}
           <Link
-            className="text-3xl font-bold p-4 border-b border-b-slate-200 hover:bg-green-600 text-white"
+            className="text-3xl font-bold p-4 border-b border-b-slate-200 transition-all duration-300 hover:bg-green-600 text-white"
             title="Add Task"
           >
             <svg
@@ -59,7 +59,7 @@ const TaskBar = () => {
 
           {/* Important */}
           <Link
-            className="text-3xl font-bold p-4 border-b border-b-slate-200 hover:bg-yellow-600 text-white"
+            className="text-3xl font-bold p-4 border-b border-b-slate-200 transition-all duration-300 hover:bg-yellow-600 text-white"
             title="Mark as Important"
           >
             <svg
@@ -78,7 +78,7 @@ const TaskBar = () => {
 
           {/* Complete */}
           <Link
-            className="text-3xl font-bold p-4 border-b border-b-slate-200 hover:bg-red-600 text-white"
+            className="text-3xl font-bold p-4 border-b border-b-slate-200 transition-all duration-300 hover:bg-red-600 text-white"
             title="Mark as Complete"
           >
             <svg
