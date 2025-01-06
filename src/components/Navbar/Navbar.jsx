@@ -30,7 +30,7 @@ const Navbar = () => {
                 {/* Menu Items */}
                 <div className="flex items-center space-x-4">
                     <div className="flex gap-2">
-                        <Link to='/registration' className="text-md font-semibold transition-all duration-300 border-b p-2 hover:bg-yellow-300 hover:text-black">Register</Link>
+                        <Link to='/registration' className="text-md font-semibold transition-all duration-300 border-b p-2 hover:bg-green-600 hover:text-black">Register</Link>
                         <Link to='/login' className="text-md font-semibold transition-all duration-300 px-4 py-2 border rounded-md bg-blue-800 hover:bg-blue-600">Login</Link>
                     </div>
                     {/* Avatar Dropdown */}
