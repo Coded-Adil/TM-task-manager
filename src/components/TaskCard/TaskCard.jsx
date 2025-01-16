@@ -1,5 +1,5 @@
 const TaskCard = ({ task }) => {
-    const { title, type, deadline, assigned_to } = task;
+    const { title, type, deadline, created_at, assigned_to } = task;
     return (
         <div className="p-6 rounded-lg shadow-lg text-white transition-transform transform duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-black">
             <div className="flex flex-col gap-2">
@@ -7,6 +7,7 @@ const TaskCard = ({ task }) => {
             </div>
             <div className="flex justify-between mt-4 text-sm">
                 <div className="my-2">
+                    <h2>Created At: {created_at}</h2>
                     <h2>Deadline: {deadline}</h2>
                 </div>
                 <p className="font-bold text-blue-500">{type}</p>
