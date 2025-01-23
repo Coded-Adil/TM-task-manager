@@ -7,7 +7,6 @@ const TaskBar = () => {
   const toggleTaskType = () => {
     setIsGroupTask(!isGroupTask);
   };
-
   return (
     <div className="p-6">
       <div className="flex flex-col lg:flex-row lg:justify-between items-center">
