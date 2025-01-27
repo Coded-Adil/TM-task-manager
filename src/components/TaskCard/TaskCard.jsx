@@ -1,5 +1,6 @@
 const TaskCard = ({ task }) => {
     const { title, type, deadline, created_at, assigned_to } = task;
+    
     return (
         <div className="p-6 rounded-lg shadow-lg text-white transition-transform transform duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-black">
             <div className="flex flex-col gap-2">
